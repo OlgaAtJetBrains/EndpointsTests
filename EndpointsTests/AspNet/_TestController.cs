@@ -6,7 +6,6 @@ namespace EndpointsTests.AspNet
     [ApiController]
     public class TestController : ControllerBase
     {
-        [HttpGet]
         public void Action() { }
         
         //TODO

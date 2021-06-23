@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 
 namespace EndpointsTests
 {
@@ -19,6 +18,11 @@ namespace EndpointsTests
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
+            services.Configure<RouteOptions>(routeOptions =>
+            {
+                routeOptions.ConstraintMap.Add("MapCustomConstraint", typeof(MapCustomConstraint));
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
