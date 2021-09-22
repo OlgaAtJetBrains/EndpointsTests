@@ -4,6 +4,7 @@ namespace EndpointsTests.AspNet
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Area("Area")]
     public class GapsController : ControllerBase
     {
         private const string ConstValue = "const";
@@ -13,10 +14,11 @@ namespace EndpointsTests.AspNet
         [HttpPut("{" + ConstValue + "}")]
         // Should not be displayed in Endpoints tab
         [HttpPut("{" + test + "}")]
+        // Type "" inside any token
+        // Should not raise RSRP-486121
+        [HttpGet("[controller]/[action]/[area]")]
         
-        
-        [HttpPut("/{" + TestConstValue + "}")]
-        public void Action222() { }
+        public void Action1() {}
 
     }
 }

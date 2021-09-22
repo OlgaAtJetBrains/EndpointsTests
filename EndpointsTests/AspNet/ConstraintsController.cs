@@ -58,11 +58,14 @@ namespace EndpointsTests.AspNet
         [HttpGet("{test:required}/valid")]        
         public void Action18(string test) { }
 
-
-        [HttpGet("invalid/{test:}")]
+        [HttpGet("valid/{test:}")]
         public void Action19(string test) { }
 
-        [HttpGet("invalid/{test:qwe}")]
+        
+        // Should be displaying unresolved route constaint
+        [HttpGet("invalid/{test:test}")]
         public void Action20(string test) { }
+        
+        //TODO add tests for mapped constraint
     }
 }
