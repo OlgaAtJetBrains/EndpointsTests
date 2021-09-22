@@ -55,7 +55,14 @@ namespace EndpointsTests.AspNet
         [HttpGet("valid/{test:regex()}")]
         public void Action17(string test) { }
 
-        [HttpGet("valid/{test:required}")]
+        [HttpGet("{test:required}/valid")]        
         public void Action18(string test) { }
+
+
+        [HttpGet("invalid/{test:}")]
+        public void Action19(string test) { }
+
+        [HttpGet("invalid/{test:qwe}")]
+        public void Action20(string test) { }
     }
 }

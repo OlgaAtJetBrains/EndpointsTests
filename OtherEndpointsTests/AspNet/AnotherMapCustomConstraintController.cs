@@ -6,8 +6,8 @@ namespace OtherEndpointsTests.AspNet
     [ApiController]
     public class AnotherMapCustomConstraintController  : ControllerBase
     {
+        [HttpGet("/{test:MapCustomConstraint}")]
         [HttpGet("/{test:AnotherMapCustomConstraint}")]
         public void ActionMethod(AnotherMapCustomConstraint test) { }
-
     }
 }
