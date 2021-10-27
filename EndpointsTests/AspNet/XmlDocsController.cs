@@ -15,5 +15,8 @@ namespace EndpointsTests.AspNet
         /// <param name="id"> int id </param>
         /// <param name="test"> some [from query] param</param>
         public void Action(string text, int id, [FromQuery] int test) { }
+
+        /// <inheritdoc cref="Action(string,int,int)"/>
+        public void Action(string test) { }
     }
 }
