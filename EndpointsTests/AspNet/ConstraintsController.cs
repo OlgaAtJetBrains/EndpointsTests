@@ -7,6 +7,8 @@ namespace EndpointsTests.AspNet
     [ApiController]
     public class ConstraintsController : ControllerBase
     {
+        // Tests for parameter's constraints
+        
         [HttpGet("valid/{test:alpha}")]
         public void Action(string test) { }
 
@@ -65,7 +67,5 @@ namespace EndpointsTests.AspNet
         // Should be displaying unresolved route constaint
         [HttpGet("invalid/{test:test}")]
         public void Action20(string test) { }
-        
-        //TODO add tests for mapped constraint
     }
 }

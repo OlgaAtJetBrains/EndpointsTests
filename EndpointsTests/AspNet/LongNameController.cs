@@ -6,7 +6,9 @@ namespace EndpointsTests.AspNet
     [ApiController]
     public class LongNameControllerLongNameControllerLongNameControllerLongNameController : ControllerBase
     {
+        // Tests for long controller and route names
+        
         [HttpGet("TheRouteIsLongTooTheRouteIsLongTooTheRouteIsLongTooTheRouteIsLongToo")]
-        public void Action() { }
+        public void Action() {}
     }
 }

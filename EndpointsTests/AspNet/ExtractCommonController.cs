@@ -6,11 +6,21 @@ namespace EndpointsTests.AspNet
     [ApiController]
     public class ExtractCommonController : ControllerBase
     {
-        // Should extract only `valid` part of the route, RSRP-485398
-        [HttpGet, Route("valid/route1.csv")]
-        [HttpGet, Route("valid/route2.txt")]
-        [HttpGet, Route("valid/route2.json")]
-        [HttpGet, Route("valid/valid/route2.json")]
-        public void Action(string test) { }
+        // Tests for Extract common routes part feature
+        
+        // To test the feature extract common for all routes `extract-me` part using quick fix
+        // Then only this part should be extracted and nothing more, RSRP-485398
+        
+        [HttpGet, Route("extract-me/route1.csv")]
+        public void Action1(string test){}
+
+        [HttpGet, Route("extract-me/route2.txt")]
+        public void Action2(string test){}
+
+        [HttpGet, Route("extract-me/route2.json")]
+        public void Action3(string test){}
+
+        [HttpGet, Route("extract-me/valid/route2.json")]
+        public void Action4(string test) { }
     }
 }
