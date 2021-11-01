@@ -6,7 +6,7 @@ namespace EndpointsTests.AspNet
     [ApiController]
     public class XmlDocsController : ControllerBase
     {
-        // Should display XML docs in viewer
+        // Tests to display XML comments in Endpoints viewer 
 
         /// <summary>
         /// Some XML doc here
@@ -16,7 +16,7 @@ namespace EndpointsTests.AspNet
         /// <param name="test"> some [from query] param</param>
         public void Action(string text, int id, [FromQuery] int test) { }
 
-        /// <inheritdoc cref="Action(string,int,int)"/>
+        /// <inheritdoc cref="Action(string,int,int)"></inheritdoc>
         public void Action(string test) { }
     }
 }

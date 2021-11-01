@@ -8,6 +8,8 @@ namespace EndpointsTests.AspNet
     {
         private const string SomeVar = "test";
 
+        // Tests for 
+        
         // Should not raise any issues when route contains string interpolation
 
         // The route in endpoints should contain interpolated part

@@ -6,7 +6,7 @@ namespace EndpointsTests.AspNet
     [ApiController]
     public class DefaultValueController : ControllerBase
     {
-        // Tests for default values
+        // Tests for default values in route's templates
         
         // valid - default value
         [HttpGet("valid/{x=test}")]

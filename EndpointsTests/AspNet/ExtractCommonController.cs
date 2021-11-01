@@ -8,7 +8,7 @@ namespace EndpointsTests.AspNet
     {
         // Tests for Extract common routes part feature
         
-        // To test the feature extract common for all routes `extract-me` part using quick fix
+        // To test the feature, extract common for all routes `extract-me` part using quick fix
         // Then only this part should be extracted and nothing more, RSRP-485398
         
         [HttpGet, Route("extract-me/route1.csv")]

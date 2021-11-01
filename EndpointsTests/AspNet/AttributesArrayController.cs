@@ -11,6 +11,8 @@ namespace EndpointsTests.AspNet
     [Route("api/[controller]")]
     public class AttributesArrayController : Controller
     {
+        // Test for 
+        
         [My(new []{"123", "123", nameof(AttributesArrayController)})]
         public void Action1() {}
     }
